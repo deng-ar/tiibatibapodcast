@@ -1,0 +1,329 @@
+<html>
+<head>
+    <title>Tiba-Tiba Podcast</title>
+    <style type="text/css">
+        body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f5f5f5;}
+        h1 {
+        color: #fdfdfd;
+        font-size: 42px;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-shadow: 2px 2px 7px #000f06;}       
+        p1 {
+            font: 1em sans-serif;
+            color: #284233;}
+        h2 {
+            font: 1em times new roman;
+            font-size: 20px;
+            color: #284233;
+            text-align: left;
+            margin-top: 20px;  
+            margin-bottom: 20px;
+            margin-left: 20px;
+        text-shadow: 1px 1px 1px #f7f8f7;}
+        h3 {
+            font: 1em times new roman;
+            color: #284233;
+            font-size: 18px;
+            text-align: justify;
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-left: 20px;}    
+
+            .nav-menu {
+        display: flex;
+        list-style: none;
+        justify-content: center; /* bisa left, right, or center */
+        gap: 50px; /* jarak antar menu */
+        padding: 0;
+        margin: 10px 0;
+        background-color: #284233;
+        border-radius: 5px;
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+      
+      .nav-menu li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+      .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #284233;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.logo {
+  height: 150px; /* atur tinggi logo */
+  width: auto;
+  margin-left: 20px;
+  filter: drop-shadow(10px 10px 50px rgba(248, 234, 234, 0.5));
+}
+
+.podcast-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+
+  
+}
+.podcast-column h2 {
+  color: #f4f5f5;
+  margin-bottom: 5px;
+    text-align: justify;
+    font-size: 24px;
+  background-color: #284233;
+    padding: 8px;
+    text-shadow: 1px 1px 1px #060606;
+
+}
+.podcast-column h3 {
+  color: #284233;
+  margin-bottom: 5px;
+    text-align: center;
+    font-size: 40px;
+  background-color: #284233;
+    padding: 8px;
+    text-shadow: 1px 1px 1px #060606;
+}
+.podcast-column h4 {
+  color: #f5f8f6;
+  margin-bottom: 5px;
+    text-align: center;
+    font-size: 18px;
+  background-color: #284233;
+    padding: 8px;
+    text-shadow: 1px 1px 1px #060606;
+}
+.podcast-column p {
+  color: #284233;
+  font-size: 16px;
+  margin-bottom: 10px;
+    text-align: justify;
+}
+
+.podcast-column {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: justify;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+    padding: 20px;
+}
+
+.full-column {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: justify;
+}
+
+.full-column h1, .full-column h2 {
+  color: #284233;
+  margin-bottom: 5px;
+}
+
+.two-columns {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.site-footer {
+  background-color: #284233;
+  color: #f7f2f2;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.sosial-media {
+  margin: 15px 0;
+}
+
+.sosial-media a {
+  color: #f8f7f5;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sosial-media a:hover {
+  text-decoration: underline;
+
+}
+
+.fade-in {
+  animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.home-message {
+  display: none;
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  background-color: #ffb300;
+  color: rgb(12, 0, 0);
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 999;
+  font-size: 14px;
+  animation: fadeInOut 3s ease;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+        </style>
+<head/>
+<header>
+    <div class="logo-container">
+      <img src="Logo.tiba2podcast.png" alt="Logo Tiba-Tiba Podcast" class="logo" width="200" height="200" />
+      <h1>Halo, Selamat Datang di <b>Tiba-Tiba Podcast</b>!!!</h1>
+      <hr />
+    </div>
+    <p1>
+        <nav>
+        <ul class="nav-menu">
+          <li><a href="#" onclick="showHomeMessage()">Home</a></li>
+          <div id="homeMessage" class="home-message">Kamu sudah berada di Home!</div>
+         <li><a href="About-us.html">About</a></li>
+         <li><a href="Podcast.html">Podcast</a></li>
+         <li><a href="our-product.html">Our Product</a></li>
+         <li><a href="Contact.html">Contact</a></li>
+        
+        </ul>
+    </nav>
+    </p1>
+  </header>
+
+  <script>
+    function showHomeMessage() {
+      const message = document.getElementById("homeMessage");
+      message.style.display = "block";
+      setTimeout(() => {
+        message.style.display = "none";
+      }, 3000); // tampil selama 3 detik
+    }
+  </script>
+  
+<body>   
+   
+
+  <div class="container fade-in">
+
+        <!-- Penjelasan -->
+        <section class="full-column">
+          <h2>Tiba-tiba Podcast</h2>
+          <p>Sebuah  ruang cerita dan berbagi suara yang lahir dari persahabatan lima sahabat asal Cianjur Selatan. Kami telah menjalin pertemanan sejak duduk di bangku sekolah dasar dan tumbuh bersama melalui berbagai pengalaman hidup.</p>
+          <p>Pada tahun 2022, kami memutuskan untuk mengabadikan dinamika pertemanan dan pandangan kami dalam bentuk podcast yang bisa diakses oleh siapa saja.</p>
+          <p>Podcast ini hadir sebagai media refleksi, hiburan, dan edukasi yang membahas beragam topik dari sudut pandang kami, mulai dari cerita kehidupan sehari-hari, pengalaman pribadi, hingga informasi dan tips yang relevan dengan kehidupan masyarakat saat ini. Dengan semangat kebersamaan dan keterbukaan, kami berharap Tiba-tiba Podcast dapat menjadi wadah bagi suara-suara dari Cianjur Selatan dan sekitarnya.</p>
+        </section>
+    
+        <!-- Visi & Misi -->
+        <section class="two-columns">
+          <div class="column">
+            <h3>Visi</h3>
+            <p>Menjadi platform podcast lokal yang inspiratif, inklusif, dan memberdayakan komunitas, khususnya di wilayah Cianjur Selatan.</p>
+          </div>
+          <div class="column">
+            <h3>Misi</h3>
+            <p>
+                <ul>
+                    <li> konten podcast yang relevan, edukatif, dan menghibur.</li>
+
+                    <li>Menjadi ruang terbuka bagi masyarakat untuk berbagi cerita, pengalaman, dan pengetahuan.</li>
+
+                    <li>Mendorong keterlibatan masyarakat Cianjur Selatan dalam media digital berbasis audio.</li>
+                </ul>
+
+</p>
+          </div>
+        </section>
+
+        <div class="podcast-container">
+        <div class="podcast-column">
+          <h4>Pengalaman Pribadi</h4>
+          <p>Segmen ini membagikan kisah nyata dari keseharian kami atau orang-orang sekitar, lengkap dengan dinamika, tantangan, dan pelajaran hidup yang kami alami bersama.</p>
+        </div>
+    
+        <div class="podcast-column">
+          <h4>Informasi Ringan</h4>
+          <p>Segmen ini membahas berbagai topik seperti isu sosial, kebiasaan sehat, pengembangan diri, hingga berita lokal yang relevan dengan kehidupan masyarakat.</p>
+        </div>
+    
+        <div class="podcast-column">
+          <h4>Tips, Trik, & Perspektif</h4>
+          <p>Segmen ini membagikan cara-cara praktis dalam menghadapi tantangan hidup, serta pandangan kami terhadap fenomena yang sedang terjadi, dikemas secara santai dan mudah dicerna.</p>
+        </div>
+      </div>
+    
+        <!-- Ajakan Kolaborasi -->
+        <section class="full-column">
+          <h3>Ayo Berpartisipasi Bersama Kami!</h3>
+          <p>Kami membuka kesempatan seluas-luasnya bagi siapa pun, khususnya warga Cianjur Selatan, yang ingin berkontribusi dalam Tiba-tiba Podcast. Apakah kamu punya cerita menarik, pengalaman unik, atau topik penting yang ingin dibagikan? Kamu bisa bergabung sebagai bintang tamu, atau bahkan mengirimkan rekaman podcastmu sendiri untuk kami tayangkan!</p>
+        <p>Hubungi kami melalui sosial media atau platform komunikasi yang tersedia, dan mari bersama-sama tumbuhkan ruang suara yang mewakili kisah dan semangat Cianjur Selatan.</p>
+          </section>
+    
+      </div>
+      </body>
+      <footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Tiba-Tiba Podcast. All rights reserved.</p>
+    
+    <div class="sosial-media">
+      <a href="https://open.spotify.com/show/5ag5ZpgP8a6akh07glN07D">Spotify</a>
+      <a href="https://www.instagram.com/tiba.tibapodcast">Instagram</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tibatibapodcast25@gmail.com&su=Kolaborasi%20Podcast&body=Halo%20tim%20Tiba-Tiba%20Podcast%2C%0ASaya%20tertarik%20untuk%20berkolaborasi%20dalam%20episode%20mendatang.">Email</a>
+    </div>
+    
+    <p><a href="https://wa.me/6285797448050" target="_blank" style="color: white;">WhatsApp Kami</a></p>
+  </div>
+</footer>
+    <html>

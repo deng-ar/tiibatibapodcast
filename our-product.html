@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Product - Tiba-Tiba Podcast</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body.product-page {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    color: #284233;
+    margin: 0;
+    padding: 0;
+}
+
+.product-header {
+    text-align: center;
+    padding: 40px 20px 20px;
+    background-color: #284233;
+    color: #ffffff;
+}
+
+.product-header .logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.product-header h1 {
+    margin: 10px 0;
+    font-size: 36px;
+}
+
+.product-subtext {
+    color: #dbdbdb;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.product-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.coming-soon-box {
+    text-align: center;
+    border: 2px dashed #284233;
+    padding: 50px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.coming-soon-box h2 {
+    font-size: 32px;
+    color: #284233;
+    margin-bottom: 16px;
+}
+
+.coming-soon-box p {
+    font-size: 18px;
+    color: #444;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease forwards;
+    opacity: 0;
+    animation-delay: 2s;
+}
+
+/* Typing effect */
+.typing {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #284233;
+    width: 0;
+    animation:
+        typing 2s steps(15, end) forwards,
+        blink-caret 0.7s step-end infinite;
+    font-family: monospace;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #284233; }
+}
+
+.back-home {
+    text-align: center;
+    margin: 50px 0 30px;
+}
+
+.back-home a {
+    display: inline-block;
+    background-color: #284233;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-home a:hover {
+    background-color: #1f322a;
+    transform: scale(1.05);
+}
+    </style>
+</head>
+<body class="product-page">
+    <header class="product-header">
+        <img src="Logo.tiba2podcast.png" alt="Logo Tiba-Tiba Podcast" class="logo">
+        <h1>Produk Kami</h1>
+        <p class="product-subtext">Sesuatu yang spesial sedang kami siapkan untuk kamu 🎁</p>
+    </header>
+
+    <main class="product-content">
+        <div class="coming-soon-box">
+            <h2 class="typing">Coming Soon...</h2>
+            <p class="fade-in">Kami sedang menyiapkan sesuatu yang luar biasa untuk kamu. Stay tuned!</p>
+        </div>
+    </main>
+
+    <div class="back-home">
+        <a href="index.html">← Kembali ke Home</a>
+    </div>
+</body>
+</html>

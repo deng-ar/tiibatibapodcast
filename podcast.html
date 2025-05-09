@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Podcast Kami</title>
+  <a href="index.html" class="back-arrow" title="Kembali ke Home">← Home</a>
+  
+  <style>
+    .logo-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo-container img {
+      width: 200px;
+      height: auto;
+    }
+
+    .search-form {
+  text-align: kiri;
+  margin: 20px auto;
+}
+
+.search-form input[type="search"] {
+  padding: 10px 15px;
+  width: 60%;
+  max-width: 400px;
+  border: 2px solid #555;
+  border-radius: 30px;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.search-form input[type="search"]:focus {
+  border-color: #1abc9c;
+  box-shadow: 0 0 10px rgba(26, 188, 156, 0.5);
+}
+
+.search-form input[type="submit"] {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #284233;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-form input[type="submit"]:hover {
+  background-color: #16a085;
+}
+    body {
+  font-family: 'Segoe UI', sans-serif;
+        background-color: #284233;
+  color: #284233;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  background-color: #dbdbdb;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #284233;
+}
+
+.search-form {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input[type="search"], input[type="submit"] {
+  padding: 8px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;;
+  background-color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #284233;
+  color: white;
+}
+
+td {
+  background-color: #f6f3f3;
+}
+
+a {
+  color: #284233;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.site-footer {
+  background-color: #284233;
+  color: #f7f2f2;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.sosial-media {
+  margin: 15px 0;
+}
+
+.sosial-media a {
+  color: #f8f7f5;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sosial-media a:hover {
+  text-decoration: underline;
+
+}
+.back-arrow {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #284233;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.back-arrow:hover {
+  background-color: #45a049;
+}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7xj1z2z4c5e5a5e5a5e5a5e5a5e5a5e5a" crossorigin="anonymous" />
+</head>
+<script>
+    function searchEpisodes() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const rows = document.querySelectorAll("table tr");
+  
+      rows.forEach((row, index) => {
+        if (index === 0) return; // lewati header
+        const text = row.textContent.toLowerCase();
+        row.style.display = text.includes(input) ? "" : "none";
+      });
+      return false; // supaya form tidak reload halaman
+    }
+  </script>
+<body>
+    <div class="logo-container">
+        <img src="Logo.tiba2podcast.png" alt="Tiba-Tiba Podcast Logo" />
+      </div>
+  <div class="container">
+    <form onsubmit="return searchEpisodes()" class="search-form">
+        <input type="search" id="searchInput" placeholder="🔍 Cari episode podcast..." />
+        <input type="submit" value="Cari" />
+      </form>
+
+    <h1>Halo, Selamat Datang di <b>Tiba-Tiba Podcast</b></h1>
+    <hr />
+    <h2>Mau dengarin yang mana?</h2>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Episode</th>
+            <th>Judul & Link</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Episode 1</td>
+                <td><a href="https://open.spotify.com/episode/17vebJKdf3MHzKaDx53sA5">Introdutin</a></td>
+            </tr>
+            <tr>
+                <td>Episode 2</td>
+                <td><a href="https://open.spotify.com/episode/1l5G0Kg3Wq1CSETqdjfmzm">Cerita Horor (Part 1)</a></td>
+            </tr>
+            <tr>
+                <td>Episode 3</td>
+                <td><a href="https://open.spotify.com/episode/3Layvou5mhZy5GI3muXxN9">Cerita Horor (Part 2)</a></td>
+            </tr>
+            <tr>
+                <td>Episode 4</td>
+                <td><a href="https://open.spotify.com/episode/2z4go92sH2h1zbWoZOaLwF">Cinta & Benci (Part 1)</a></td>
+            </tr>      
+            <tr>
+                <td>Episode 5</td>
+                <td><a href="https://open.spotify.com/episode/1lrDuDrxxmUszWA7zWL9Ag">Cinta & Benci (Part 2)</a></td>
+            </tr>
+            <tr>
+                <td>Episode 6</td>
+                <td><a href="https://open.spotify.com/episode/4JHzKTJt5gJqv4ZU3UOvwI">Cinta & Benci (Part 3)</a></td>
+            </tr>
+            <tr>
+                <td>Episode 7</td>
+                <td><a href="https://open.spotify.com/episode/1LYDwsoYtunsOw1LWGn64u">Selera Musik(Part 1)</a></td> 
+            </tr>
+            <tr>
+                <td>Episode 8</td>
+                <td><a href="https://open.spotify.com/episode/6wPBy8j7aUqJygWTQUbcrP">Selera Musik (Part 2)</a></td>
+            </tr>
+            <tr>
+                <td>Episode 9</td>
+                <td><a href="https://open.spotify.com/episode/5OPKDAF46BeILZMfgG4A1f">Nostalgia Sekolah (Part 1)</a></td>
+            </tr>
+            <tr>
+                <td>Episode 10</td>
+                <td><a href="https://open.spotify.com/episode/5hzarqM4UNytC6W2V1Jx39">Nostalgia Sekolah (Part 2)</a></td>
+            </tr>
+            <tr>
+                <td>Episode 11</td>
+                <td><a href="https://open.spotify.com/episode/0KEaXF8LWqIOw3jdWHMn5p">Nostalgia Sekolah (Part 3)</a></td>   
+            </tr>   
+            <tr>
+                <td>Episode 12</td>
+                <td><a href="https://open.spotify.com/episode/1Xp2vIRrNWO57WUcQejEDt">Nostalgia Sekolah (Part 4)</a></td>
+            </tr>
+            <tr>
+                <td>Episode 13</td>
+                <td><a href="https://open.spotify.com/episode/4AiSLUm3W9LmpGpN04TB9z">Movie & Series (Part 1)</a></td>
+            </tr>   
+            <tr>
+                <td>Episode 14</td>
+                <td><a href="https://open.spotify.com/episode/6KpMLhhKkRgDV8PO6FdKnT">Movie & Series (Part 2)</a></td>  
+            </tr>   
+            <tr>
+                <td>Episode 15</td>
+                <td><a href="https://open.spotify.com/episode/0ascskqPUKP4N4ASVP76UN">Exlusive Bapak Iqbal</a></td>
+            </tr>
+            <tr>
+                <td>Episode 16</td>
+                <td><a href="https://open.spotify.com/episode/4MCBkV2azJzG0tgTt2FuVF">Mental Healthy (Iqb's Opinion)</a></td>
+            </tr>
+            <tr>
+                <td>Episode 17</td>
+                <td><a href="https://open.spotify.com/episode/2AUHLID9Um4o75tL8BtKpV">Berawal dari Keresahan</a></td>
+            </tr>
+            <tr>
+                <td>Episode 18</td>
+                <td><a href="https://open.spotify.com/episode/6ZmfcGPW9dKhRDpSNqlGKb">Melihat Semuanya dari Dekat</a></td>
+            </tr>
+            <tr>
+                <td>Episode 19</td>
+                <td><a href="https://open.spotify.com/episode/6AhkXSUTumNWjkVtEKHQTb">Kamu Tipe Fixed Mindset atau Growth Mindset?</a></td>
+            </tr>
+            <tr>
+                <td>Episode 20</td>
+                <td><a href="https://open.spotify.com/episode/3fto4c9zgoz71B8s3GzowP">Mulai dari Coba Aja Dulu</a></td>
+            </tr>   
+            <tr>
+                <td>Episode 21</td>
+                <td><a href="https://open.spotify.com/episode/7Mamc1G46EKpw6W6gy68GK">Coba Aja Dulu</a></td>
+            </tr>
+            <tr>
+                <td>Episode 22</td>
+                <td><a href="https://open.spotify.com/episode/7Mamc1G46EKpw6W6gy68GK">All about Social Media</a></td>   
+            </tr>   
+            <tr>
+                <td>Episode 23</td>
+                <td><a href="https://open.spotify.com/episode/61x5DjJG5OD5jPPXrPFTbs">Sec Acc, Third Acc, Fourth Acc Kalian Punya sampe Berapa?</a></td>
+            </tr>
+            <tr>
+                <td>Episode 24</td>
+                <td><a href="https://open.spotify.com/episode/2TMN99NBv4FCak1EkjkzT9">When Random Stranger Start Chat with You</a></td> 
+            </tr>   
+            <tr>
+                <td>Episode 25</td>
+                <td><a href="https://open.spotify.com/episode/32KqVjGfn34bu9TKhFgiM2">Tiba-Tiba Bahas Hindia</a></td>
+            </tr>
+            <tr>
+                <td>Episode 26</td>
+                <td><a href="https://open.spotify.com/episode/2Tvg3O2y2DgDOYcrTIDdVG">Bicara Privilege : Apa Untung dan Ruginya? </a></td>  
+            </tr>
+            <tr>
+                <td>Episode 27</td>
+                <td><a href="https://open.spotify.com/episode/4jwoOpvD9Y2dVTiTFK8tP2">Kalau Kamu Dikasih Kesempatan Buat Milih Privilege Mau Kekayaan atau Kepintaran </a></td>
+            </tr>
+            <tr>
+                <td>Episode 28</td>
+                <td><a href="https://open.spotify.com/episode/4kHB0KIPCIbOyP7orRca88">Yakin Kamu Udah Merdeka? Kamu Masih Takut Buat Jadi Diri Sendiri Ga? </a></td>
+            </tr>
+            <tr>
+                <td>Episode 29</td>
+                <td><a href="https://open.spotify.com/episode/7wjIrQUSxYVA6JJvLLySH3">Doa Kami untuk Indonesia</a></td>
+            </tr>
+            <tr>
+                <td>Episode 30</td>
+                <td><a href="https://open.spotify.com/episode/0Nnl0cIOvakHI94myytpsh">"SDM TIKTOK RENDAH" Affah iyaah?</a></td>
+            </tr>
+            <tr>
+                <td>Episode 31</td>
+                <td><a href="https://open.spotify.com/episode/0Q6IXpdKAJTjFLf2BhH0Yj">Hindari Kegagalan: Langlah Menuju Kesuksesan!</a></td>
+            </tr>
+            <tr>
+                <td>Episode 32</td>
+                <td><a href="https://open.spotify.com/episode/5GKjDkdVr0niNb5phEWxtF">Cerita Misteri Kami: Penumpang Tak Kasat Mata </a></td>
+            </tr>
+            <tr>
+                <td>Episode 33</td>
+                <td><a href="https://open.spotify.com/episode/4rOjA8eP8kbanacoQhX5Qy">Misteri dan Sugesti</a></td>
+            </tr>
+            <tr>
+                <td>Episode 34</td>
+                <td><a href="https://open.spotify.com/episode/0xEi1FqGGqjUUjoVc9cHck">Penghuni Kos yang Tak Terlihat</a></td>   
+            </tr>
+            <tr>
+                <td>Episode 35</td>
+                <td><a href="https://open.spotify.com/episode/77jFKQ706nwOGP7lE4utrP?">Kenapa Literasi Keuangan Sepenting Ilmu Parenting</a></td>
+            </tbody>
+        </table>
+        <br><br>
+<table style="width: 100%; max-width: 800px; margin: auto; background-color: #ffffff; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+  <tr style="background-color: #284233; color: white;">
+    <th colspan="2" style="padding: 15px; font-size: 20px;">🎙️ Mau Ikutan Jadi Bagian dari Podcast Kami?</th>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding: 15px; font-size: 16px;">
+      Kami terbuka untuk kamu yang ingin berbagi cerita atau mengirimkan rekaman podcast-mu sendiri! Yuk jadi bagian dari <b>Tiba-Tiba Podcast</b> ✨
+      <br><br>
+      Kamu bisa langsung kirim ide atau rekamanmu ke email kami:
+      <br><br>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tibatibapodcast25@gmail.com&su=Kolaborasi%20Podcast&body=Halo%20tim%20Tiba-Tiba%20Podcast%2C%0ASaya%20tertarik%20untuk%20berkolaborasi%20dalam%20episode%20mendatang."></a>
+        📧 <a href= style="color: #0077cc; text-decoration: none;"><b> Kirimkan Podcastmu!</b></a>
+      <br><br>
+      Jangan ragu untuk berbagi — semua cerita layak didengar! 💬
+    </td>
+  </tr>
+</table>
+      </div>
+    </div>
+  </body>
+  <a href="index.html" class="back-arrow" title="Kembali ke Home">← Home</a>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Tiba-Tiba Podcast. All rights reserved.</p>
+      
+      <div class="sosial-media">
+        <a href="https://open.spotify.com/show/5ag5ZpgP8a6akh07glN07D">Spotify</a>
+        <a href="https://www.instagram.com/tiba.tibapodcast">Instagram</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tibatibapodcast25@gmail.com&su=Kolaborasi%20Podcast&body=Halo%20tim%20Tiba-Tiba%20Podcast%2C%0ASaya%20tertarik%20untuk%20berkolaborasi%20dalam%20episode%20mendatang.">Email</a>
+      </div>
+      
+      <p><a href="https://wa.me/6285797448050" target="_blank" style="color: white;">WhatsApp Kami</a></p>
+    </div>
+  </footer>
+  </html>
